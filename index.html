@@ -1,0 +1,703 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Krown Jewels | Bridal & Artificial Jewellery Pakistan</title>
+  <meta name="description" content="Discover beautiful bridal jewellery, artificial jewellery, earrings, necklace sets, rings and bangles at Krown Jewels. Contact us on WhatsApp to order.">
+  <meta name="keywords" content="Krown Jewels, artificial jewellery Pakistan, bridal jewellery, earrings, necklace sets, bangles">
+  <meta name="author" content="Krown Jewels">
+  <meta name="theme-color" content="#39251f">
+
+  <meta property="og:title" content="Krown Jewels | Jewellery for Every Occasion">
+  <meta property="og:description" content="Explore elegant jewellery for weddings, parties and everyday style.">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --brown: #39251f;
+      --brown-light: #714a3d;
+      --gold: #b68b45;
+      --cream: #fffaf3;
+      --beige: #f0e3d1;
+      --white: #ffffff;
+      --text: #33251f;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    button, .btn {
+      cursor: pointer;
+    }
+
+    .announcement {
+      background: var(--brown);
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-size: 13px;
+    }
+
+    header {
+      background: var(--cream);
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--beige);
+    }
+
+    .logo {
+      color: var(--brown);
+      font-family: Georgia, serif;
+      font-size: 27px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+
+    .tagline {
+      color: var(--brown-light);
+      font-family: Georgia, serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: var(--beige);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding: 12px;
+    }
+
+    nav a {
+      padding: 8px 12px;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 3px;
+    }
+
+    nav a:hover {
+      background: var(--brown);
+      color: white;
+    }
+
+    .cart-button {
+      border: 1px solid var(--gold);
+      background: var(--white);
+      color: var(--brown);
+      padding: 9px 14px;
+      border-radius: 4px;
+    }
+
+    .hero {
+      padding: 65px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #f0e0cb, #fffaf3, #ead5b9);
+    }
+
+    .eyebrow {
+      color: var(--brown-light);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 6vw, 55px);
+      line-height: 1.2;
+      margin: 12px auto;
+      max-width: 750px;
+      color: var(--brown);
+    }
+
+    .hero p {
+      max-width: 560px;
+      margin: 15px auto;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--brown);
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border: 1px solid var(--brown);
+      border-radius: 3px;
+      margin: 5px;
+    }
+
+    .btn:hover {
+      background: var(--brown-light);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--brown);
+      border-color: var(--gold);
+    }
+
+    .section {
+      padding: 42px 5%;
+      scroll-margin-top: 15px;
+    }
+
+    .section-title {
+      font-family: Georgia, serif;
+      color: var(--brown);
+      text-align: center;
+      font-size: 30px;
+      margin: 0 0 8px;
+    }
+
+    .section-intro {
+      text-align: center;
+      color: #75645b;
+      margin: 0 auto 25px;
+      max-width: 650px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .category {
+      display: block;
+      background: var(--beige);
+      padding: 18px 8px;
+      text-align: center;
+      border: 1px solid #e4d1b8;
+      text-decoration: none;
+      border-radius: 5px;
+      font-family: Georgia, serif;
+      font-weight: bold;
+    }
+
+    .category:hover {
+      background: #e4cfb0;
+    }
+
+    .toolbar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .toolbar input, .toolbar select {
+      padding: 11px;
+      border: 1px solid #d8c7b4;
+      border-radius: 4px;
+      background: white;
+      min-width: 150px;
+      max-width: 100%;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .product {
+      border: 1px solid #e9dccc;
+      background: white;
+      border-radius: 5px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-art {
+      min-height: 145px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, #f5e9d9, #fffaf3);
+      font-size: 55px;
+    }
+
+    .product-info {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product h3 {
+      font-family: Georgia, serif;
+      margin: 4px 0;
+      font-size: 18px;
+    }
+
+    .product p {
+      color: #75645b;
+      font-size: 13px;
+      margin: 5px 0 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: var(--brown-light);
+      margin: 5px 0 12px;
+    }
+
+    .product .btn {
+      width: 100%;
+      text-align: center;
+      margin: 4px 0;
+      font-size: 13px;
+      padding: 10px;
+    }
+
+    .product .btn-outline {
+      margin-top: auto;
+    }
+
+    .notice {
+      text-align: center;
+      color: #75645b;
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    .content-panel {
+      background: white;
+      border: 1px solid #eadccc;
+      border-radius: 5px;
+      padding: 22px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .content-panel h3 {
+      font-family: Georgia, serif;
+      color: var(--brown);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--beige);
+      padding: 12px 0;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: var(--brown);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 12px;
+      max-width: 550px;
+      margin: 20px auto 0;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #d8c7b4;
+      border-radius: 4px;
+      width: 100%;
+      background: white;
+    }
+
+    .contact-form textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .breadcrumb {
+      padding: 12px 5%;
+      font-size: 13px;
+      color: #75645b;
+    }
+
+    .breadcrumb a {
+      color: var(--brown-light);
+    }
+
+    footer {
+      background: var(--brown);
+      color: white;
+      padding: 30px 5%;
+      text-align: center;
+    }
+
+    footer a {
+      color: #f0d8a7;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 15px 0;
+    }
+
+    .cart-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.55);
+      z-index: 10;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .cart-overlay.open {
+      display: flex;
+    }
+
+    .cart-panel {
+      background: var(--cream);
+      width: 100%;
+      max-width: 500px;
+      max-height: 85vh;
+      overflow-y: auto;
+      border-radius: 6px;
+      padding: 20px;
+    }
+
+    .cart-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cart-heading h2 {
+      font-family: Georgia, serif;
+    }
+
+    .close-cart {
+      border: 0;
+      background: transparent;
+      font-size: 26px;
+    }
+
+    .cart-row {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--beige);
+    }
+
+    .cart-row-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .quantity button {
+      background: var(--beige);
+      border: 1px solid #d8c7b4;
+      padding: 3px 11px;
+      border-radius: 3px;
+    }
+
+    .cart-total {
+      font-size: 19px;
+      font-weight: bold;
+      text-align: right;
+      margin: 20px 0;
+    }
+
+    .empty-cart {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .whatsapp-btn {
+      background: #16834a;
+      border-color: #16834a;
+      color: white;
+      text-align: center;
+      width: 100%;
+    }
+
+    .whatsapp-btn:hover {
+      background: #116d3c;
+    }
+
+    @media (max-width: 650px) {
+      header { justify-content: center; text-align: center; }
+      .logo { font-size: 24px; }
+      .categories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .product-art { min-height: 115px; font-size: 44px; }
+      .product-info { padding: 10px; }
+      .product h3 { font-size: 16px; }
+      .product .btn { font-size: 12px; }
+      nav { gap: 0; }
+      nav a { padding: 8px; font-size: 13px; }
+      .section { padding: 32px 4%; }
+    }
+
+    @media (max-width: 360px) {
+      .products { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    Welcome to Krown Jewels — Elegance for Every Occasion
+  </div>
+
+  <header>
+    <div>
+      <a class="logo" href="#home">♛ KROWN JEWELS</a>
+      <div class="tagline">JEWELLERY FOR EVERY OCCASION</div>
+    </div>
+    <button class="cart-button" onclick="openCart()" aria-label="Open shopping cart">
+      🛍️ Cart (<span id="cart-count">0</span>)
+    </button>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About Us</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="breadcrumb" aria-label="Breadcrumb">
+    <a href="#home">Home</a> &gt; Jewellery Boutique
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="eyebrow">Discover your elegance</div>
+      <h1>Jewellery That Makes You Shine</h1>
+      <p>
+        Discover beautiful bridal jewellery, elegant earrings and
+        stunning necklace sets for your special moments.
+      </p>
+      <a class="btn" href="#shop">Shop Collection</a>
+      <a class="btn btn-outline" href="#contact">Get a Quote</a>
+    </section>
+
+    <section class="section" id="categories">
+      <h2 class="section-title">Explore Our Collections</h2>
+      <p class="section-intro">
+        Find jewellery for weddings, parties, celebrations and everyday style.
+      </p>
+      <div class="categories">
+        <a class="category" href="#shop" onclick="chooseCategory('Bridal Jewellery')">👑<br>Bridal Jewellery</a>
+        <a class="category" href="#shop" onclick="chooseCategory('Artificial Jewellery')">✨<br>Artificial Jewellery</a>
+        <a class="category" href="#shop" onclick="chooseCategory('Earrings')">💎<br>Earrings</a>
+        <a class="category" href="#shop" onclick="chooseCategory('Necklace Sets')">📿<br>Necklace Sets</a>
+        <a class="category" href="#shop" onclick="chooseCategory('Rings')">💍<br>Rings</a>
+        <a class="category" href="#shop" onclick="chooseCategory('Bangles & Bracelets')">🌸<br>Bangles & Bracelets</a>
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <h2 class="section-title">Our Jewellery Shop</h2>
+      <p class="section-intro">
+        Browse the sample catalogue. Product names, prices and pictures can be updated later.
+      </p>
+
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search jewellery..." aria-label="Search jewellery" oninput="renderProducts()">
+        <select id="category-filter" aria-label="Filter by category" onchange="renderProducts()">
+          <option value="All">All Categories</option>
+          <option>Bridal Jewellery</option>
+          <option>Artificial Jewellery</option>
+          <option>Earrings</option>
+          <option>Necklace Sets</option>
+          <option>Rings</option>
+          <option>Bangles & Bracelets</option>
+        </select>
+      </div>
+
+      <div class="products" id="products"></div>
+      <p class="notice">Sample catalogue only. Please confirm price and availability on WhatsApp.</p>
+    </section>
+
+    <section class="section" id="about">
+      <h2 class="section-title">About Krown Jewels</h2>
+      <p class="section-intro">Beauty, elegance and jewellery for your special moments.</p>
+      <div class="content-panel">
+        <h3>Welcome to Krown Jewels</h3>
+        <p>
+          Krown Jewels is your destination for beautiful jewellery,
+          from bridal-inspired designs to stylish everyday accessories.
+          Our collection is planned for customers who love to express
+          their personal style on every occasion.
+        </p>
+        <p>
+          Browse our collections, add your favourite items to the cart
+          and contact us on WhatsApp to enquire about availability,
+          pricing and delivery.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-intro">Helpful information before placing your order.</p>
+      <div class="content-panel">
+        <details class="faq-item">
+          <summary>How can I place an order?</summary>
+          <p>Add products to your cart and select Order on WhatsApp. You can send the order details to us for confirmation.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How can I confirm the product price?</summary>
+          <p>Prices shown in the sample catalogue are examples. Please confirm the final price and availability with us on WhatsApp.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you offer home delivery?</summary>
+          <p>Contact us on WhatsApp to confirm delivery availability, charges and estimated delivery time for your location.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What payment methods are available?</summary>
+          <p>Please ask us on WhatsApp to confirm the payment methods currently available for your order.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I ask about a custom order?</summary>
+          <p>Yes. Use the Get a Quote option or contact us on WhatsApp to discuss your requirements.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is your return or exchange policy?</summary>
+          <p>Please contact us before ordering to confirm the applicable return and exchange terms.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2 class="section-title">Contact Krown Jewels</h2>
+      <p class="section-intro">
+        Questions about jewellery, pricing or delivery? Get in touch with us.
+      </p>
+
+      <div class="contact-links">
+        <a class="btn whatsapp-btn" href="https://wa.me/923112711796" target="_blank" rel="noopener">
+          WhatsApp Us
+        </a>
+        <a class="btn btn-outline" href="mailto:rumayousuf9@gmail.com">Email Us</a>
+        <a class="btn btn-outline" href="https://www.instagram.com/krownjewels.pk/" target="_blank" rel="noopener">
+          Instagram
+        </a>
+      </div>
+
+      <form class="contact-form" onsubmit="sendContactMessage(event)">
+        <label for="customer-name">Your name</label>
+        <input id="customer-name" name="name" required placeholder="Enter your name">
+
+        <label for="customer-email">Your email (optional)</label>
+        <input id="customer-email" name="email" type="email" placeholder="Enter your email">
+
+        <label for="customer-message">Your message</label>
+        <textarea id="customer-message" name="message" required placeholder="How can we help you?"></textarea>
+
+        <button class="btn" type="submit">Send via WhatsApp</button>
+      </form>
+      <p class="notice">This form opens WhatsApp with your message. It does not send messages automatically.</p>
+    </section>
+
+    <section class="section" id="policies">
+      <h2 class="section-title">Shopping Information</h2>
+      <div class="content-panel">
+        <h3>Shipping & Returns</h3>
+        <p>Contact us before placing an order to confirm delivery areas, shipping charges, delivery times and return or exchange conditions.</p>
+        <h3>Privacy</h3>
+        <p>Only share the information needed to enquire about or place your order. A full privacy policy should be added before collecting customer information through any connected service.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#home" style="color:#f0d8a7">KROWN JEWELS</a>
+    <p>Elegance in Every Detail</p>
+    <div class="footer-links">
+      <a href="#about">About Us</a>
+      <a href="#shop">Shop</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.instagram.com/krownjewels.pk/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/923112711796" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:rumayousuf9@gmail.com">Email</a>
+    </div>
+    <p>© <span id="year"></span> Krown Jewels. All rights reserved.</p>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay" role="dialog" aria-modal="true" aria-labelledby="cart-title" onclick="overlayClick(event)">
+    <div class="cart-panel">
+      <div class="cart-heading">
+        <h2 id="cart-title">Your Shopping Cart</h2>
+        <button class="close-cart" onclick="closeCart()" aria-label="Close cart">×</button>
+      </div>
+      <div id="cart-items"></div>
+      <div class="cart-total" id="cart-total">Total: Rs. 0</div>
+      <button class="btn whatsapp-btn" style="width:100%" onclick="checkoutWhatsApp()">Order on WhatsApp</button>
+      <button class="btn btn-outline" style="width:100%" onclick="closeCart()">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script>
+    // Replace these sample products with your real products and prices later.
+    const products = [
+      {id:1, name:"Bridal Jewellery Set", category:"Bridal Jewellery", price:4500, icon:"👑", description:"Elegant bridal-inspired style."},
+      {id:2, name:"Artificial Necklace Set", category:"Artificial Jewellery", price:1800, icon:"📿", description:"A stylish accessory for occasions."},
+      {id:3, name:"Classic Earrings", category:"Earrings", price:750, icon:"💎", description:"Elegant earrings for your collection."},
+      {id:4, name:"Party Wear Necklace", category:"Necklace Sets", price:2200, icon:"✨", description:"A statement style for celebrations."},
+      {id:5, name:"Fashion Ring", category:"Rings", price:500, icon:"💍", description:"A delicate fashion accessory."},
+      {id:6, name:"Bangles Set", category:"Bangles & Bracelets", price:1200, icon:"🌸", description:"Beautiful bangles for special moments."}
+    ];
+
+    // Cart is held in this page session. A backend is needed for persistent orders.
+    let cart = [];
+
+    const money = amount =>
+      "Rs. " + amount.toLocaleString("en-PK");
+
+    function renderProducts() {
+      const query = document.getElementById("search").value.trim().toLowerCase();
+      const category = document.getElementById("category-filter").value;
+
+      const filt
